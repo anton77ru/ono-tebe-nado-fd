@@ -8,10 +8,9 @@
 
 .header__links-list {
     display: flex;
-    /* Значение ниже получено через наложение в Pixel Perfect
-    и подгонку в Developer Tools */
-    gap: 32px;
+    gap: 32px;           /* Pixel perfect */
     list-style-type: circle;
+    padding: 20px 0 0 0;  /* Pixel perfect */
 }
 
 .header__link {
@@ -28,6 +27,7 @@
 
 .header__logo {
     justify-self: center;
+    padding: 20px 0 0 0;  /* Pixel perfect */
 }
 
 .header__logo-image {
@@ -38,6 +38,9 @@
 .address {
     max-width: 240px;
     justify-self: end;
+    line-height: 25px;  /* Pixel perfect */
+    padding: 18px 0 0 0;  /* Pixel perfect */
+    font-style: normal;  /* Удаляет italic */
 }
 
 .phone, .email {
@@ -73,24 +76,28 @@
  .cover__description {
     position: relative;
     z-index: 2;
-    margin-top: 180px;
+    margin-top: 159px;  /* Pixel Perfect */
  }
 
  .aligned-text {
-    letter-spacing: 25px;
+    letter-spacing: 30px;
     display: block;
  }
 
  .aligned-text_center {
-    letter-spacing: 25px;
+    letter-spacing: 30px;
     text-align: center;
     display: block;
+    padding-left: 30px;  /* Pixel Perfect */
+    padding-top: 10px;   /* Pixel Perfect */
  }
 
  .aligned-text_right {
-    letter-spacing: 25px;
-    text-align: right;
-    display: block;
+    letter-spacing: 30px;
+    /* text-align: right;  Удален т.к. не работает при inline-block */
+    display: inline-block; /* Изменено с block на inline-block для margin Pixel Perfect*/
+    padding-top: 20px;   /* Pixel Perfect */
+    margin-left: 610px;  /* Pixel Perfect */
  }
 
  .cover__description-text {
@@ -99,7 +106,7 @@
     position: absolute;
     bottom: 11px;
     left: 0;
-    word-spacing: 17px;
+    word-spacing: 18px;
  }
 
  .bet-button {
@@ -232,7 +239,9 @@
 .about-text-part {
     display: flex;
     flex-direction: column;
-    }    
+    padding-left: 23px;  /* Pixel perfect */
+    width: 693px;        /* Pixel perfect */
+    }
 
 .about__title {
     text-transform: uppercase;
@@ -261,6 +270,9 @@
 .address-footer {
     justify-self: start;
     width: 260.7px;
+    line-height: 25px;  /* Pixel perfect */
+    font-size: 18px;
+    font-style: normal;  /* Удаляет italic */
 }
 
 .footer__menu {
@@ -270,6 +282,7 @@
 .footer__menu-list {
     list-style-type: none;
     text-align: center;
+    font-size: 18px;
 }
 
 .footer__menu-link {
