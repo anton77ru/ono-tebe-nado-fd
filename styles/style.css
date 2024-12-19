@@ -15,7 +15,7 @@
 }
 
 .header__link {
-    text-decoration: underline; 
+    text-decoration: underline;
 }
 
 .header__link_active {
@@ -51,6 +51,7 @@
     background-position: center;
     position: relative; /* для позиционирования overlay как absolute далее */
     color: white;
+    height: 757px;
 }
 
 .overlay {
@@ -60,7 +61,7 @@
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;    
+    bottom: 0;
  }
  
  .cover__title {
@@ -72,7 +73,7 @@
  .cover__description {
     position: relative;
     z-index: 2;
-    margin-top: 106px;
+    margin-top: 180px;
  }
 
  .aligned-text {
@@ -130,7 +131,7 @@
 
  .lots__card-list-item {
     width: 334px;
-    min-height: 596px;   
+    min-height: 596px;
  }
 
  .card-link, .card {
