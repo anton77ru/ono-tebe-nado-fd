@@ -4,21 +4,18 @@
     grid-template-columns: 1fr min-content 1fr;
     align-items: center;
     font-size: 18px;
+    max-height: 293px; /* по макету для Pixel perfect */
 }
 
 .header__links-list {
     display: flex;
     gap: 32px;           /* Pixel perfect */
     list-style-type: circle;
-    padding: 20px 0 0 0;  /* Pixel perfect */
+    margin-bottom: 11px; /* Pixel perfect */
 }
 
 .header__link {
     text-decoration: underline;
-}
-
-.header__link_active {
-    text-decoration: none;
 }
 
 .header__links-list-item_no-bullit {
@@ -27,7 +24,6 @@
 
 .header__logo {
     justify-self: center;
-    padding: 20px 0 0 0;  /* Pixel perfect */
 }
 
 .header__logo-image {
@@ -39,11 +35,14 @@
     max-width: 240px;
     justify-self: end;
     line-height: 25px;  /* Pixel perfect */
-    padding: 18px 0 0 0;  /* Pixel perfect */
     font-style: normal;  /* Удаляет italic */
 }
 
-.phone, .email {
+.header__address {
+    margin-bottom: 10px; /* Pixel perfect */
+}
+
+.contact-link {
     white-space: nowrap;
 }
 
@@ -54,12 +53,12 @@
     background-position: center;
     position: relative; /* для позиционирования overlay как absolute далее */
     color: white;
-    height: 757px;
+    min-height: 757px;
 }
 
 .overlay {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     z-index: 1;
     top: 0;
     left: 0;
@@ -76,7 +75,10 @@
  .cover__description {
     position: relative;
     z-index: 2;
-    margin-top: 159px;  /* Pixel Perfect */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 104px; /* Perfect Pixel */
  }
 
  .aligned-text {
@@ -88,23 +90,21 @@
     letter-spacing: 30px;
     text-align: center;
     display: block;
-    padding-left: 30px;  /* Pixel Perfect */
-    padding-top: 10px;   /* Pixel Perfect */
+    padding: 17px 0 0 30px; /* Perfect Pixel */
  }
 
  .aligned-text_right {
     letter-spacing: 30px;
     /* text-align: right;  Удален т.к. не работает при inline-block */
     display: inline-block; /* Изменено с block на inline-block для margin Pixel Perfect*/
-    padding-top: 20px;   /* Pixel Perfect */
-    margin-left: 610px;  /* Pixel Perfect */
- }
+    padding-top: 18px; /* Perfect Pixel */
+    padding-left: 614px;
+}
 
  .cover__description-text {
     text-transform: uppercase;
     font-size: 22px;
-    position: absolute;
-    bottom: 11px;
+    position: relative;
     left: 0;
     word-spacing: 18px;
  }
@@ -115,10 +115,7 @@
     color: white;
     padding: 12px 32px 11px 31px;
     background-color: transparent;
-    border-color: white;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    border-color: currentColor;
  }
 
  .lots__heading {
@@ -143,6 +140,7 @@
 
  .card-link, .card {
     height: 100%;
+    text-decoration: none;
  }
 
  .card {
@@ -152,6 +150,9 @@
     background-color: blue;
     padding: 48px 40px;
     position: relative; /* для позиционирования overlay как absolute далее */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
  }
 
  .card__title {
@@ -160,44 +161,25 @@
     color: white;
     font-weight: 700;
     font-size: 22px;
-    z-index: 1;
+    z-index: 2;
  }
 
  .card__text {
     color: white;
     font-size: 20px;
-    z-index: 1;
+    z-index: 2;
  }
 
 .card_type_film {
     background-image: url(../images/card-lot-01.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .card_type_book {
     background-image: url(../images/card-lot-02.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .card_type_picture {
     background-image: url(../images/card-lot-03.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.overlay-card {
-    background-color: rgba(0, 0, 0, 0.6);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 0;
 }
 
  .lots__look {
@@ -215,7 +197,9 @@
 }
 
 .about__logo {
-    position: relative;  /* для фона логотипа далее */
+    display: flex;
+    justify-content: center;
+    padding-top: 31px;  /* Pixel Perfect */
 }
 
 .circle {
@@ -223,9 +207,6 @@
     height: 240px;
     background-color: black;
     border-radius: 50%;
-    position: absolute;
-    top: 31px;
-    left: 47px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -247,7 +228,7 @@
     text-transform: uppercase;
     font-weight: 700;
     font-size: 40px;
-    margin-top: 136px;
+    margin-top: 133px;   /* Pixel perfect */
     margin-bottom: 100px;
 }
 
@@ -267,9 +248,9 @@
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.address-footer {
+.footer > .address {
     justify-self: start;
-    width: 260.7px;
+    min-width: 260.7px;
     line-height: 25px;  /* Pixel perfect */
     font-size: 18px;
     font-style: normal;  /* Удаляет italic */
@@ -289,10 +270,6 @@
     text-decoration: underline;
 }
 
-.footer__menu-link_active {
-    text-decoration: none;
-}
-
 .footer__social-list {
     justify-self: end;
     list-style-type: none;
@@ -303,4 +280,12 @@
 .footer__social-icon {
     width: 48px;
     height: 48px;
+}
+
+.active {
+    text-decoration: none;  
+    /* 
+    Согласно комментариям ревью, использую отдельный класс для всех активных ссылок.
+    Разместил снизу чтобы применялось и к header, и к footer.
+    */
 }
