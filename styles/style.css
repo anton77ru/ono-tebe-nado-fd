@@ -10,7 +10,7 @@
     display: flex;
     gap: 32px;           /* Pixel perfect */
     list-style-type: circle;
-    padding-top: 12px; /* Pixel perfect */
+    padding-top: 5px; /* Pixel perfect */
 }
 
 .header__link {
@@ -23,6 +23,7 @@
 
 .header__logo {
     justify-self: center;
+    padding-top: 5px;
 }
 
 .header__logo-image {
@@ -38,7 +39,7 @@
 }
 
 .header__address {
-    padding-top: 10px; /* Pixel perfect */
+    padding-top: 5px; /* Pixel perfect */
 }
 
 .contact-link {
