@@ -23,7 +23,7 @@
 
 .header__logo {
     justify-self: center;
-    padding-top: 5px;
+    padding-top: 5px;    /* Pixel perfect */
 }
 
 .header__logo-image {
